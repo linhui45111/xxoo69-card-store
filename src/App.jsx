@@ -142,9 +142,9 @@ export default function App() {
         <div className="hero">
           <div className="hero-copy">
             <div className="pill">⚡ 自动发货 · 实时库存 · 安全下单</div>
-            <h1>更明亮、更清爽、更有科技感的数字卡密商城</h1>
+            <h1>更清爽的蓝白科技风数字卡密商城</h1>
             <p className="hero-desc">
-              这是超人科技的前台首页。当前已改为浅色一点的科技风，并预留了商品、客服、公告等内容的占位区域，后续你可以随时继续修改。
+              我已经把页面调整成更协调的蓝白科技风：整体背景更偏浅蓝，卡片和内容区更偏白色，同时把顶部“超人科技”几个字明显放大了。
             </p>
 
             <div className="hero-actions">
