@@ -1,63 +1,72 @@
 import React, { useMemo, useState } from 'react'
 
-const categories = ['全部', '会员订阅', '游戏点卡', '软件授权', '数字服务']
+const categories = ['全部', '分类待填写 1', '分类待填写 2', '分类待填写 3', '更多分类']
 
 const products = [
   {
     id: 1,
-    name: '流媒体会员月卡',
-    category: '会员订阅',
-    price: 19.9,
-    stock: 328,
-    badge: '热卖',
-    desc: '自动发货，适合个人娱乐订阅场景。',
+    name: '商品待填写 1',
+    category: '分类待填写 1',
+    price: 0,
+    stock: 999,
+    badge: '可编辑',
+    desc: '这里先放占位内容，后续你可以随时改成真实商品名称、价格和说明。',
   },
   {
     id: 2,
-    name: '游戏充值兑换码',
-    category: '游戏点卡',
-    price: 50,
-    stock: 126,
-    badge: '秒发',
-    desc: '卡密库存充足，购买后订单页即时查看。',
+    name: '商品待填写 2',
+    category: '分类待填写 2',
+    price: 0,
+    stock: 999,
+    badge: '可编辑',
+    desc: '这里先放占位内容，后续你可以随时改成真实商品名称、价格和说明。',
   },
   {
     id: 3,
-    name: '办公软件授权码',
-    category: '软件授权',
-    price: 39.9,
-    stock: 84,
-    badge: '推荐',
-    desc: '支持在线验证，适合学习与办公使用。',
+    name: '商品待填写 3',
+    category: '分类待填写 3',
+    price: 0,
+    stock: 999,
+    badge: '可编辑',
+    desc: '这里先放占位内容，后续你可以随时改成真实商品名称、价格和说明。',
   },
   {
     id: 4,
-    name: '云工具高级版激活码',
-    category: '数字服务',
-    price: 29.9,
-    stock: 57,
-    badge: '限量',
-    desc: '科技工具类数字权益，库存实时同步。',
+    name: '商品待填写 4',
+    category: '更多分类',
+    price: 0,
+    stock: 999,
+    badge: '可编辑',
+    desc: '这里先放占位内容，后续你可以随时改成真实商品名称、价格和说明。',
   },
   {
     id: 5,
-    name: 'AI 工具体验套餐',
-    category: '数字服务',
-    price: 15.9,
-    stock: 210,
-    badge: '新品',
-    desc: '面向轻量体验用户，购买后自动展示使用说明。',
+    name: '商品待填写 5',
+    category: '更多分类',
+    price: 0,
+    stock: 999,
+    badge: '可编辑',
+    desc: '这里先放占位内容，后续你可以随时改成真实商品名称、价格和说明。',
   },
   {
     id: 6,
-    name: '音乐会员季卡',
-    category: '会员订阅',
-    price: 49.9,
-    stock: 98,
-    badge: '优惠',
-    desc: '适合长期使用，订单支持邮箱找回。',
+    name: '商品待填写 6',
+    category: '分类待填写 1',
+    price: 0,
+    stock: 999,
+    badge: '可编辑',
+    desc: '这里先放占位内容，后续你可以随时改成真实商品名称、价格和说明。',
   },
 ]
+
+const siteConfig = {
+  siteName: '超人科技',
+  domain: 'xxoo69.qzz.io',
+  noticeTitle: '公告内容待填写',
+  noticeText:
+    '这里是公告占位区。后续你可以随时把这里改成购买说明、售后规则、活动通知或其他公告内容。',
+  supportText: '客服方式待填写（例如 Telegram / QQ / 微信 / 邮箱）',
+}
 
 function ProductCard({ product }) {
   return (
@@ -106,6 +115,7 @@ export default function App() {
       <div className="background">
         <div className="glow glow-left" />
         <div className="glow glow-right" />
+        <div className="glow glow-bottom" />
         <div className="grid-bg" />
       </div>
 
@@ -114,8 +124,8 @@ export default function App() {
           <div className="brand">
             <div className="brand-logo">✦</div>
             <div>
-              <p className="brand-title">XXOO69 发卡中心</p>
-              <p className="brand-domain">xxoo69.qzz.io</p>
+              <p className="brand-title">{siteConfig.siteName}</p>
+              <p className="brand-domain">{siteConfig.domain}</p>
             </div>
           </div>
 
@@ -132,9 +142,9 @@ export default function App() {
         <div className="hero">
           <div className="hero-copy">
             <div className="pill">⚡ 自动发货 · 实时库存 · 安全下单</div>
-            <h1>简约、快速、有科技感的数字卡密商城</h1>
+            <h1>更明亮、更清爽、更有科技感的数字卡密商城</h1>
             <p className="hero-desc">
-              面向会员订阅、游戏点卡、软件授权和数字服务的自动化发卡平台。购买后自动展示卡密，支持订单查询与售后联系。
+              这是超人科技的前台首页。当前已改为浅色一点的科技风，并预留了商品、客服、公告等内容的占位区域，后续你可以随时继续修改。
             </p>
 
             <div className="hero-actions">
@@ -173,8 +183,8 @@ export default function App() {
         <div className="section-head">
           <div>
             <p className="eyebrow">商品中心</p>
-            <h2>选择你需要的数字商品</h2>
-            <p>分类筛选、关键词搜索、库存展示与一键购买，适合直接接入发卡系统后端。</p>
+            <h2>商品信息先预留，后续随时替换</h2>
+            <p>你以后只需要改上方的 categories 和 products 数组，就能把占位内容替换成真实商品。</p>
           </div>
 
           <label className="search">
@@ -207,25 +217,23 @@ export default function App() {
       </section>
 
       <section id="flow" className="container flow">
-        <div className="feature-card"><span>#</span><h3>透明价格</h3><p>商品售价、库存、交付方式清晰展示，减少购买疑问。</p></div>
+        <div className="feature-card"><span>#</span><h3>透明价格</h3><p>商品售价、库存、交付方式清晰展示，后期可接入真实数据。</p></div>
         <div className="feature-card"><span>⏱</span><h3>即时交付</h3><p>支付完成后自动生成订单，卡密可在订单页查看。</p></div>
-        <div className="feature-card"><span>☏</span><h3>售后入口</h3><p>预留在线客服、订单查询和公告说明位置。</p></div>
+        <div className="feature-card"><span>☏</span><h3>售后入口</h3><p>{siteConfig.supportText}</p></div>
       </section>
 
       <section id="notice" className="container notice">
         <div>
           <p className="eyebrow">站点公告</p>
-          <h2>购买前请确认商品说明与邮箱信息</h2>
-          <p>
-            数字商品通常为虚拟权益或卡密，发货后不支持无理由退换。请保存订单号或邮箱，便于后续查询与售后处理。
-          </p>
+          <h2>{siteConfig.noticeTitle}</h2>
+          <p>{siteConfig.noticeText}</p>
         </div>
         <button className="white-btn">查看订单</button>
       </section>
 
       <footer id="support" className="footer">
         <div className="container footer-inner">
-          <p>© 2026 XXOO69 发卡中心 · xxoo69.qzz.io</p>
+          <p>© 2026 {siteConfig.siteName} · {siteConfig.domain}</p>
           <div>
             <a href="#">服务条款</a>
             <a href="#">隐私政策</a>
