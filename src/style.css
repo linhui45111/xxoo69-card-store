@@ -271,3 +271,38 @@ button, input, textarea { font: inherit; }
     font-size: clamp(1.15rem, 6vw, 1.65rem) !important;
   }
 }
+/* Final small homepage hero title tuning */
+.hero .hero-copy {
+  max-width: 540px !important;
+}
+
+.hero h1.hero-title {
+  max-width: 540px !important;
+  font-size: clamp(1.85rem, 2.75vw, 3.05rem) !important;
+  line-height: 1.14 !important;
+  letter-spacing: -0.03em !important;
+  margin: 14px 0 16px !important;
+}
+
+.hero h1.hero-title .hero-title-line {
+  display: block !important;
+}
+
+.hero h1.hero-title .hero-title-ja {
+  display: block !important;
+  max-width: 520px !important;
+  margin-top: 14px !important;
+  font-size: clamp(1.05rem, 1.55vw, 1.55rem) !important;
+  line-height: 1.35 !important;
+  letter-spacing: -0.015em !important;
+}
+
+.hero-copy > p {
+  max-width: 520px !important;
+  font-size: 0.95rem !important;
+  line-height: 1.8 !important;
+}
+
+.hero-actions {
+  margin-top: 24px !important;
+}
