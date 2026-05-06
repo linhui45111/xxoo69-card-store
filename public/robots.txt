@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hshbtech.com/sitemap.xml
