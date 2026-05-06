@@ -97,7 +97,8 @@ function Logo() {
 }
 
 function Header() {
-  const path = window.location.pathname.replace(/\/+$/, "") || "/";
+  const path = window.location.pathname;
+
   const nav = [
     ["Home", "/", "ホーム"],
     ["Services", "/services", "サービス"],
@@ -117,7 +118,9 @@ function Header() {
           </a>
         ))}
       </nav>
-      <a className="header-cta" href="/contact">Start a Project</a>
+      <a className="header-cta" href="/contact">
+        Start a Project
+      </a>
     </header>
   );
 }
@@ -171,7 +174,7 @@ function Hero() {
         <div className="eyebrow">Remote-first technology service provider</div>
         <h1>
           Practical software, automation, and AI workflow solutions.
-          <span>実務に強いテクノロジー支援。</span>
+          <span> 実務に強いテクノロジー支援。</span>
         </h1>
         <p>
           HSHB Tech helps small businesses and professional teams build practical web systems,
@@ -182,8 +185,12 @@ function Hero() {
           クラウド導入、AI ワークフロー支援を提供します。
         </p>
         <div className="hero-actions">
-          <a className="primary-btn" href="/services">View Services</a>
-          <a className="secondary-btn" href="/contact">Contact Us</a>
+          <a className="primary-btn" href="/services">
+            View Services
+          </a>
+          <a className="secondary-btn" href="/contact">
+            Contact Us
+          </a>
         </div>
       </div>
 
@@ -191,7 +198,11 @@ function Hero() {
         <div className="orb orb-one" />
         <div className="orb orb-two" />
         <div className="terminal-card">
-          <div className="terminal-top"><span /><span /><span /></div>
+          <div className="terminal-top">
+            <span />
+            <span />
+            <span />
+          </div>
           <pre>{`hshbtech.com
 > software_development
 > ai_workflow_automation
@@ -213,11 +224,24 @@ function HomePage() {
   return (
     <>
       <Hero />
+
       <section className="stat-row">
-        <div><strong>4</strong><span>Core service areas</span></div>
-        <div><strong>EN / JA</strong><span>Business-ready content</span></div>
-        <div><strong>HTTPS</strong><span>Secure public website</span></div>
-        <div><strong>Remote</strong><span>Flexible collaboration</span></div>
+        <div>
+          <strong>4</strong>
+          <span>Core service areas</span>
+        </div>
+        <div>
+          <strong>EN / JA</strong>
+          <span>Business-ready content</span>
+        </div>
+        <div>
+          <strong>HTTPS</strong>
+          <span>Secure public website</span>
+        </div>
+        <div>
+          <strong>Remote</strong>
+          <span>Flexible collaboration</span>
+        </div>
       </section>
 
       <section className="section">
@@ -251,9 +275,13 @@ function HomePage() {
         <div>
           <span>Get in touch</span>
           <h2>Start with a short technical consultation.</h2>
-          <p>Tell us what you want to build, automate, or improve. We will help clarify the next practical step.</p>
+          <p>
+            Tell us what you want to build, automate, or improve. We will help clarify the next practical step.
+          </p>
         </div>
-        <a className="primary-btn" href="/contact">Contact HSHB Tech</a>
+        <a className="primary-btn" href="/contact">
+          Contact HSHB Tech
+        </a>
       </section>
     </>
   );
@@ -304,19 +332,69 @@ function AboutPage() {
       <div className="content-grid">
         <div className="glass-card">
           <h2>Who we support</h2>
-          <p>We support small businesses, independent operators, professional teams, and early-stage projects that need practical technical implementation.</p>
-          <p className="jp">実務に合う技術実装を必要とする中小企業、個人事業者、専門チーム、初期段階のプロジェクトを支援します。</p>
+          <p>
+            We support small businesses, independent operators, professional teams, and early-stage projects
+            that need practical technical implementation.
+          </p>
+          <p className="jp">
+            実務に合う技術実装を必要とする中小企業、個人事業者、専門チーム、初期段階のプロジェクトを支援します。
+          </p>
         </div>
+
         <div className="glass-card">
           <h2>How we work</h2>
-          <p>HSHB Tech operates as a remote-first technology service provider. Communication, planning, implementation, and documentation can be handled online.</p>
-          <p className="jp">相談、設計、実装、ドキュメント作成までオンラインで対応可能です。</p>
+          <p>
+            HSHB Tech operates as a remote-first technology service provider. Communication,
+            planning, implementation, and documentation can be handled online.
+          </p>
+          <p className="jp">
+            HSHB Tech はリモートファーストで運営しています。相談、設計、実装、ドキュメント作成までオンラインで対応可能です。
+          </p>
         </div>
+
         <div className="glass-card">
-          <h2>Official information</h2>
-          <p>Official website: <strong>{SITE.domain}</strong></p>
-          <p>General inquiries: <strong>{SITE.email}</strong></p>
-          <p>Support: <strong>{SITE.support}</strong></p>
+          <h2>Official Information</h2>
+          <p>
+            Official website: <strong>{SITE.domain}</strong>
+          </p>
+          <p>
+            Official domain: <strong>{SITE.domain}</strong>
+          </p>
+          <p>
+            General inquiries: <strong>{SITE.email}</strong>
+          </p>
+          <p>
+            Support: <strong>{SITE.support}</strong>
+          </p>
+          <p>
+            Business administration: <strong>{SITE.business}</strong>
+          </p>
+
+          <h2
+            style={{
+              marginTop: "24px",
+              paddingTop: "18px",
+              borderTop: "1px solid var(--line)",
+              fontSize: "1.2rem",
+            }}
+          >
+            公式情報
+          </h2>
+          <p>
+            公式ウェブサイト：<strong>{SITE.domain}</strong>
+          </p>
+          <p>
+            公式ドメイン：<strong>{SITE.domain}</strong>
+          </p>
+          <p>
+            一般お問い合わせ：<strong>{SITE.email}</strong>
+          </p>
+          <p>
+            サポート：<strong>{SITE.support}</strong>
+          </p>
+          <p>
+            管理連絡先：<strong>{SITE.business}</strong>
+          </p>
         </div>
       </div>
     </PageShell>
@@ -334,7 +412,10 @@ function ServicesPage() {
       <ServiceGrid />
       <div className="blue-note">
         <strong>Service scope depends on the project.</strong>
-        <p>Each project is discussed based on requirements, timeline, available tools, and expected deliverables.</p>
+        <p>
+          Each project is discussed based on requirements, timeline, available tools, and expected deliverables.
+          HSHB Tech does not claim false partnerships, fake office addresses, or unauthorized certifications.
+        </p>
       </div>
     </PageShell>
   );
@@ -349,14 +430,32 @@ function ContactPage() {
       subtitleJa="一般的なお問い合わせ、サポート依頼、業務相談は、公式の hshbtech.com メールアドレスまでご連絡ください。"
     >
       <div className="contact-grid">
-        <a className="contact-card" href={`mailto:${SITE.email}`}><span>General inquiries</span><strong>{SITE.email}</strong><small>For general questions and project inquiries.</small></a>
-        <a className="contact-card" href={`mailto:${SITE.support}`}><span>Support</span><strong>{SITE.support}</strong><small>For service support and technical questions.</small></a>
-        <a className="contact-card" href={`mailto:${SITE.business}`}><span>Business</span><strong>{SITE.business}</strong><small>For business administration and account matters.</small></a>
+        <a className="contact-card" href={`mailto:${SITE.email}`}>
+          <span>General inquiries</span>
+          <strong>{SITE.email}</strong>
+          <small>For general questions and project inquiries.</small>
+        </a>
+        <a className="contact-card" href={`mailto:${SITE.support}`}>
+          <span>Support</span>
+          <strong>{SITE.support}</strong>
+          <small>For service support and technical questions.</small>
+        </a>
+        <a className="contact-card" href={`mailto:${SITE.business}`}>
+          <span>Business</span>
+          <strong>{SITE.business}</strong>
+          <small>For business administration and account matters.</small>
+        </a>
       </div>
+
       <div className="glass-card">
         <h2>Before contacting us</h2>
-        <p>Please include a short description of your request, target website or system, timeline, and any existing tools or services involved.</p>
-        <p className="jp">お問い合わせの際は、依頼内容、対象となるサイトやシステム、希望時期、利用中のツールやサービスを簡単にお知らせください。</p>
+        <p>
+          Please include a short description of your request, target website or system, timeline,
+          and any existing tools or services involved.
+        </p>
+        <p className="jp">
+          お問い合わせの際は、依頼内容、対象となるサイトやシステム、希望時期、利用中のツールやサービスを簡単にお知らせください。
+        </p>
       </div>
     </PageShell>
   );
@@ -370,13 +469,27 @@ function PrivacyPage() {
       subtitle="This privacy policy explains what information HSHB Tech may collect through this website and how it is used."
       subtitleJa="このプライバシーポリシーは、本ウェブサイトを通じて HSHB Tech が取得する可能性のある情報とその利用目的を説明します。"
     >
-      <LegalContent sections={[
-        ["Information we collect", "We may collect information you provide when contacting us, such as your name, email address, company name, and message content."],
-        ["How we use information", "We use this information to respond to inquiries, provide requested support, discuss potential projects, and improve our services."],
-        ["Sharing with third parties", "We do not sell personal information. Information may be processed by service providers only when necessary for email delivery, hosting, security, or business operations."],
-        ["Data requests", `You may contact ${SITE.email} to request access, correction, or deletion of information you have provided.`],
-        ["Contact", `For privacy questions, contact ${SITE.email}.`],
-      ]} />
+      <LegalContent
+        sections={[
+          [
+            "Information we collect",
+            "We may collect information you provide when contacting us, such as your name, email address, company name, and message content.",
+          ],
+          [
+            "How we use information",
+            "We use this information to respond to inquiries, provide requested support, discuss potential projects, and improve our services.",
+          ],
+          [
+            "Sharing with third parties",
+            "We do not sell personal information. Information may be processed by service providers only when necessary for email delivery, hosting, security, or business operations.",
+          ],
+          [
+            "Data requests",
+            `You may contact ${SITE.email} to request access, correction, or deletion of information you have provided.`,
+          ],
+          ["Contact", `For privacy questions, contact ${SITE.email}.`],
+        ]}
+      />
     </PageShell>
   );
 }
@@ -389,13 +502,27 @@ function TermsPage() {
       subtitle="These terms provide a simple overview of the acceptable use of this website and how HSHB Tech services are discussed."
       subtitleJa="本ページは、本ウェブサイトの利用および HSHB Tech のサービス相談に関する基本的な条件を説明します。"
     >
-      <LegalContent sections={[
-        ["Information only", "The content on this website is provided for general information and does not constitute a final service contract or binding quotation."],
-        ["Services", "Actual service scope, fees, timeline, and deliverables are determined through separate discussion, proposal, or agreement."],
-        ["Acceptable use", "You may not misuse this website, attempt unauthorized access, interfere with the service, or submit harmful content."],
-        ["No false representation", "HSHB Tech does not claim unauthorized partner status, fake registrations, or false customer references."],
-        ["Contact", `For questions about these terms, contact ${SITE.email}.`],
-      ]} />
+      <LegalContent
+        sections={[
+          [
+            "Information only",
+            "The content on this website is provided for general information and does not constitute a final service contract or binding quotation.",
+          ],
+          [
+            "Services",
+            "Actual service scope, fees, timeline, and deliverables are determined through separate discussion, proposal, or agreement.",
+          ],
+          [
+            "Acceptable use",
+            "You may not misuse this website, attempt unauthorized access, interfere with the service, or submit harmful content.",
+          ],
+          [
+            "No false representation",
+            "HSHB Tech does not claim unauthorized partner status, fake registrations, or false customer references.",
+          ],
+          ["Contact", `For questions about these terms, contact ${SITE.email}.`],
+        ]}
+      />
     </PageShell>
   );
 }
@@ -409,9 +536,20 @@ function SecurityPage() {
       subtitleJa="HSHB Tech は、安全で信頼できる公式サイト体験の維持を目指しています。"
     >
       <div className="content-grid">
-        <div className="glass-card"><h2>HTTPS</h2><p>The official website should be accessed through HTTPS to help protect visitor connections.</p></div>
-        <div className="glass-card"><h2>Domain email</h2><p>Official communication should use email addresses under the hshbtech.com domain.</p></div>
-        <div className="glass-card"><h2>Responsible content</h2><p>We avoid false partner claims, fake office addresses, fake client logos, or misleading company information.</p></div>
+        <div className="glass-card">
+          <h2>HTTPS</h2>
+          <p>The official website should be accessed through HTTPS to help protect visitor connections.</p>
+        </div>
+        <div className="glass-card">
+          <h2>Domain email</h2>
+          <p>Official communication should use email addresses under the hshbtech.com domain.</p>
+        </div>
+        <div className="glass-card">
+          <h2>Responsible content</h2>
+          <p>
+            We avoid false partner claims, fake office addresses, fake client logos, or misleading company information.
+          </p>
+        </div>
       </div>
     </PageShell>
   );
@@ -433,11 +571,18 @@ function LegalContent({ sections }) {
 function FAQSection() {
   return (
     <section className="section faq-section">
-      <div className="section-head"><span>FAQ</span><h2>Frequently asked questions</h2><p>よくある質問</p></div>
+      <div className="section-head">
+        <span>FAQ</span>
+        <h2>Frequently asked questions</h2>
+        <p>よくある質問</p>
+      </div>
       <div className="faq-grid">
         {faqs.map((item) => (
           <article className="glass-card" key={item.q}>
-            <h3>{item.q}</h3><h4>{item.qJa}</h4><p>{item.a}</p><p className="jp">{item.aJa}</p>
+            <h3>{item.q}</h3>
+            <h4>{item.qJa}</h4>
+            <p>{item.a}</p>
+            <p className="jp">{item.aJa}</p>
           </article>
         ))}
       </div>
@@ -461,14 +606,22 @@ function PageShell({ label, title, subtitle, subtitleJa, children }) {
 
 function NotFoundPage() {
   return (
-    <PageShell label="404" title="Page not found" subtitle="The page you are looking for does not exist." subtitleJa="お探しのページは見つかりませんでした。">
-      <a className="primary-btn" href="/">Back to Home</a>
+    <PageShell
+      label="404"
+      title="Page not found"
+      subtitle="The page you are looking for does not exist."
+      subtitleJa="お探しのページは見つかりませんでした。"
+    >
+      <a className="primary-btn" href="/">
+        Back to Home
+      </a>
     </PageShell>
   );
 }
 
 function App() {
   const path = window.location.pathname.replace(/\/+$/, "") || "/";
+
   const routes = {
     "/": <HomePage />,
     "/about": <AboutPage />,
@@ -478,6 +631,7 @@ function App() {
     "/terms": <TermsPage />,
     "/security": <SecurityPage />,
   };
+
   return (
     <div className="app">
       <div className="site-bg" />
