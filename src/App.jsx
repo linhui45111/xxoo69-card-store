@@ -172,10 +172,11 @@ function Hero() {
     <section className="hero">
       <div className="hero-copy">
         <div className="eyebrow">Remote-first technology service provider</div>
-        <h1>
-          Practical software, automation, and AI workflow solutions.
-          <span> 実務に強いテクノロジー支援。</span>
-        </h1>
+        <h1 className="hero-title">
+  <span className="hero-title-line">Build practical software,</span>
+  <span className="hero-title-line">automation, and AI workflows.</span>
+  <span className="hero-title-ja">実務に強いテクノロジー支援</span>
+</h1>
         <p>
           HSHB Tech helps small businesses and professional teams build practical web systems,
           automate workflows, set up cloud infrastructure, and improve operations with AI-enabled tools.
